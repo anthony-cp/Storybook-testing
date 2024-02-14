@@ -1,0 +1,42 @@
+import Button from "../components/Button.js";
+import * as ButtonStories from "./Button.stories.js";
+
+import {
+  ArgsTable,
+  Meta,
+  Title,
+  Canvas,
+  Controls,
+} from "@storybook/addon-docs/blocks";
+
+<Meta of={ButtonStories} />
+
+<Title>Button Component</Title>
+
+## Method
+
+This is needed to create your own manual doc
+
+1. run `npm install --save-dev @storybook/addon-controls`
+2. add `{name: '@storybook/addon-docs', options: {configureJSX: true,},} ` to .storybook/main.js
+
+# Wrap components in `<Canvas> </Canvas>` like below
+
+<Canvas>
+  <Button {...ButtonStories.Red.args} />
+
+  <Controls
+    props={[
+      { name: "backgroundColor", type: "color" },
+      { name: "borderSize", type: "range", min: 0, max: 50 },
+    ]}
+  />
+</Canvas>
+
+# You can wrap multiple stories in a canvas
+
+<Canvas>
+  <Button {...ButtonStories.Red.args} />
+  <Button {...ButtonStories.Green.args} />
+  <Button {...ButtonStories.Small.args} />
+</Canvas>
