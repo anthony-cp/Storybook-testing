@@ -1,3 +1,3 @@
 # To start
-run `npx sb init` 
-run `npm run storybook` to start the storybook
+1. run `npx sb init` 
+2. run `npm run storybook` to start the storybook
