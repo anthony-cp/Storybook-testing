@@ -1,4 +1,4 @@
-import Button from '../components/Button.js'
+import Button from '../components/AnthonyButton.js'
 
 
 /** Add JSDoc comment above export default<br /> this should be a line break.
